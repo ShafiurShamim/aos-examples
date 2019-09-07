@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AOS - Animate on scroll example</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <h1>My Gallery</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, atque?
+      </p>
+    </header>
+    <main class="container">
+      <section class="card" data-aos="fade-up">
+        <img src="img/image.png" alt="" />
+        <div>
+          <h3>Picture One</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui
+            cupiditate laudantium voluptate minus debitis fugit sequi accusamus
+            est numquam optio.
+          </p>
+          <a href="#" class="btn">Button</a>
+        </div>
+      </section>
+      <section class="card" data-aos="fade-left" id="trigger-left">
+        <img src="img/image.png" alt="" />
+        <div>
+          <h3>Picture Two</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui
+            cupiditate laudantium voluptate minus debitis fugit sequi accusamus
+            est numquam optio.
+          </p>
+          <a href="#" class="btn">Button</a>
+        </div>
+      </section>
+      <section class="card" data-aos="fade-right">
+        <img src="img/image.png" alt="" />
+        <div>
+          <h3>Picture Three</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui
+            cupiditate laudantium voluptate minus debitis fugit sequi accusamus
+            est numquam optio.
+          </p>
+          <a href="#" class="btn">Button</a>
+        </div>
+      </section>
+      <section class="card" data-aos="flip-up">
+        <img src="img/image.png" alt="" />
+        <div>
+          <h3>Picture Four</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui
+            cupiditate laudantium voluptate minus debitis fugit sequi accusamus
+            est numquam optio.
+          </p>
+          <a href="#" class="btn">Button</a>
+        </div>
+      </section>
+      <section class="card" data-aos="fade-down-left">
+        <img src="img/image.png" alt="" />
+        <div>
+          <h3>Picture Five</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui
+            cupiditate laudantium voluptate minus debitis fugit sequi accusamus
+            est numquam optio.
+          </p>
+          <a href="#" class="btn">Button</a>
+        </div>
+      </section>
+      <section class="card" data-aos="fade-down-right" id="trigger-right">
+        <img src="img/image.png" alt="" />
+        <div>
+          <h3>Picture Six</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui
+            cupiditate laudantium voluptate minus debitis fugit sequi accusamus
+            est numquam optio.
+          </p>
+          <a href="#" class="btn">Button</a>
+        </div>
+      </section>
+      <section class="card" data-aos="custom-animation">
+        <img src="img/image.png" alt="" />
+        <div>
+          <h3>Picture Seven</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui
+            cupiditate laudantium voluptate minus debitis fugit sequi accusamus
+            est numquam optio.
+          </p>
+          <a href="#" class="btn">Button</a>
+        </div>
+      </section>
+    </main>
+
+    <div
+      class="item-anchor anchor-left"
+      data-aos="fade-right"
+      data-aos-anchor="#trigger-left"
+      data-aos-anchor-placement="top-top"
+    >
+      LEFT
+      <span>when top of <strong>picture three</strong> hits top of window</span>
+    </div>
+    <div
+      class="item-anchor anchor-right"
+      data-aos="fade-left"
+      data-aos-anchor="#trigger-right"
+      data-aos-anchor-placement="top-center"
+    >
+      RIGHT
+      <span>when top of <strong>picture six</strong> hits top of window</span>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 500
+        // once: true
+        // mirror: true
+      });
+      document.addEventListener("aos:in", ({ detail }) => {
+        console.log("animated in", detail);
+      });
+    </script>
+  </body>
+</html>
